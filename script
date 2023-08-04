@@ -1273,8 +1273,9 @@ end
 
 
 
-if not game.Players.LocalPlayer.Name == "" and not game:GetService("RbxAnalyticsService"):GetClientId() == "" then
-print('Not Blacklisted.') 
-else
+if game:GetService("RbxAnalyticsService"):GetClientId() == "" then
 game.Players.LocalPlayer:Kick("sorry, you're blacklisted cause you are a nigga :) -- tariviste")
+else
+print('Not Blacklisted.') 
+
 end
